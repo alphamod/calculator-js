@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../website/Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="./calculator.css">
+    <script src="https://kit.fontawesome.com/d171b53bb9.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-xl-6 offset-md-3 offset-xl-3 bgClr">
+                <div class="row topIconRow">
+                    <div class="col-md-1 col-xl-1">
+                        <Button class="mt-2"><i class="fa fa-bars"></i></Button>
+                    </div>
+                    <div class="col-md-4 col-xl-4">
+                        <h2 class="align-middle">Standard</h2>
+                    </div>
+                    <div class="col-md-1 col-xl-1">
+                        <button class="mt-2"><i class="fas fa-external-link-alt"></i></button>
+                    </div>
+                    <div class="col-md-1 col-xl-1 offset-md-5 offset-xl-5">
+                        <button class="mt-2"><i class="fa fa-history"></i></button>
+                    </div>
+                </div>
+                <div class="row historyDisplay">
+                    <div class="col-md-12 col-xl-12">
+                        <input type="text" class="historyDisplay" id="historyDisplay" readonly>
+                    </div>
+                </div>
+                <div class="row textDisplay">
+                    <div class="col-md-12 col-xl-12">
+                        <input type="text" class="mainDisplay" id="mainDisplay" maxlength=20 placeholder="0" readonly>
+                    </div>
+                </div>
+                <div class="row mButtons">
+                    <div class="col-md-2 col-xl-2">
+                        <button class="grayButtons" disabled><h6>MC</h6></button>
+                    </div>
+                    <div class="col-md-2 col-xl-2">
+                        <button class="grayButtons" disabled><h6>MR</h6></button>
+                    </div>
+                    <div class="col-md-2 col-xl-2">
+                        <button><h6>M+</h6></button>
+                    </div>
+                    <div class="col-md-2 col-xl-2">
+                        <button><h6>M-</h6></button>
+                    </div>
+                    <div class="col-md-2 col-xl-2">
+                        <button><h6>MS</h6></button>
+                    </div>
+                    <div class="col-md-2 col-xl-2">
+                        <button class="grayButtons" disabled><h6>M&darr;</h6></button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton" id="percent">%</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton" id="sqRoot"><b><sup>2</sup></b><i class="fa fa-square-root-alt"></i></button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton" id="square">x<sup>2</sup></button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton" id="oneToX"><sup>1</sup>/x</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton operator" id="clearLast" value="CE">CE</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton operator" id="cScreen" value="C">C</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton operator"id="backSpace" value="CS"><i class="fas fa-backspace"></i></button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton operator"id="div" value="/">&divide;</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigWhiteButton number" id="num7" value="7" >7</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigWhiteButton number" id="num8" value="8" >8</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigWhiteButton number" id="num9" value="9" >9</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton operator" id="mul" value="*">&times;</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigWhiteButton number" id="num4" value="4" >4</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigWhiteButton number" id="num5" value="5" >5</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigWhiteButton number"id="num6" value="6" >6</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton operator" value="-">-</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigWhiteButton number" value="1" id="num1" >1</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigWhiteButton number" value="2" id="num2" >2</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigWhiteButton number" value="3" id="num3">3</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton operator" value="+" id="sum">+</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton"id="plusOrMinus"><sup>+</sup>/<sub>-</sub></button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigWhiteButton number" id="num0" value="0" >0</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton number"id="numFloat" value=".">.</button>
+                    </div>
+                    <div class="col-md-3 col-xl-3 m-0 bigButtonCol">
+                        <button class="bigButton bigGrayButton operator" id="equals" value="=">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./calculator.js"></script>
+</body>
+</html>
